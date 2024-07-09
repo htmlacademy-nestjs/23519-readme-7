@@ -1,0 +1,24 @@
+{
+  "name": "feed",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/feed/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "feed:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "feed:build:development"
+        },
+        "production": {
+          "buildTarget": "feed:build:production"
+        }
+      }
+    }
+  }
+}
